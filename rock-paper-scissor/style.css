@@ -1,0 +1,109 @@
+body {
+    color: #44e9ff;
+    text-shadow: 2px 2px 2px #fa32d2;
+}
+
+h1 {
+    font-size: 55px;
+    text-align: center;
+}
+
+.opcoes {
+    display: inline-block;
+    width: 90%;
+
+    border: 3px solid #fa32d2;
+    border-radius: 5%;
+
+    padding: 20px;
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+.opcoes img {
+    max-width: 50%;
+    width: 18%;
+    opacity: 0.8;
+    transition: 1s;
+}
+
+.opcoes img[src*=paper] {
+    margin: 0 70px;
+}
+   
+#resultado {
+    width: 100%;
+    display: block;
+
+    color: #af61f7;
+    text-shadow: none;
+
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+#botao {
+    display: inline-block;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+button {
+    width: 50%;
+   
+    text-align: center;
+    font-size: 30px;
+
+    margin-bottom: 50px;
+    padding: 20px;
+
+    border: 1px solid #fa32d2;
+    border-radius: 5%;
+
+    background: linear-gradient(#44e9ff, #61f79f);
+    color: white;
+}
+
+#versus {
+    width: 100%;
+    display: block;
+
+    font-size: 30px;
+    text-align: center;
+}
+
+p {
+    color: #61f79f;
+
+    text-shadow: 2px 2px 2px rgb(243, 158, 158);
+    font-size: 35px;
+    font-family: 'monospace';
+    text-align: center;
+}
+
+@media (min-width: 600px) {
+    .opcoes img {
+        width: 11%;
+    }
+}
+
+@media (min-width: 800px) {
+    #view {
+        width: 60%;
+        display: block;
+        margin: 0 auto;
+    }
+
+   .opcoes img {
+       width: 8%;
+   }
+
+   p {
+       font-size: 40px;
+   }
+   
+}

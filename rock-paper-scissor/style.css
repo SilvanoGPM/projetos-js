@@ -66,6 +66,13 @@ button {
 
     background: linear-gradient(#44e9ff, #61f79f);
     color: white;
+
+    transition: 1s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    transition: 1s;
 }
 
 #versus {

@@ -1,4 +1,4 @@
-function carrousel() {
+function carousel() {
     const images = document.querySelectorAll('.carousel__item');
     const next = document.querySelector('.carousel__control--next');
     const previous = document.querySelector('.carousel__control--previous');
@@ -49,4 +49,4 @@ function carrousel() {
     nextImageId = setInterval(nextImage, SWITCH_TIME);
 }
 
-carrousel();
+carousel();

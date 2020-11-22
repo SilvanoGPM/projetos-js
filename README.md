@@ -1,4 +1,4 @@
-# Projetos de Sites
+# Projetos de Sites :rocket:
 Repositório com códigos de projetos criados com, HTML, CSS, e JavaScript.
 
 ---

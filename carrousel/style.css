@@ -1,0 +1,54 @@
+.carousel-container {
+    width: 100%;
+}
+
+.carousel {
+    position: relative;
+    width: 500px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.carousel__item {
+    width: 500px;
+    height: 100%;
+    display: none;
+}
+
+.carousel__item--visible {
+    display: block;
+}
+
+.carousel__item img {
+    width: 100%;
+}
+
+.carousel__buttons {
+    opacity: 0;
+    transition: .5s;
+}
+
+.carousel__control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 3em;
+    color: white;
+}
+
+.carousel:hover > .carousel__buttons {
+    opacity: 1;
+}
+
+.carousel__control--next {
+    right: 20px;
+}
+
+.carousel__control--previous {
+    left: 0;
+}

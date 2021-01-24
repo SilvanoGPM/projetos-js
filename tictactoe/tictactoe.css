@@ -1,0 +1,96 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #95a5a6;
+}
+
+.msg {
+    display: inline-block;
+    opacity: 1;
+    max-width: 200px;
+    width: 200px;
+    height: 50px;
+    z-index: 9999;
+    position: absolute;
+    background:#34495e;
+    color: white;
+    border-radius: 10px;
+    font-size: 1.8rem;
+    text-overflow: ellipsis;
+    text-align: center;
+    line-height: 50px;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: .25s;
+    transform:  translateX(-1000px);
+}
+
+.msg.visible {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.msg.cross-win {
+    background: #3498db;
+}
+
+.msg.ball-win {
+    background: #e67e22;
+}
+
+.tictactoe-wrapper {
+    width: 400px;
+}
+
+.tictactoe {
+    display: flex;
+    justify-content: center;
+    border-collapse: collapse;
+}
+
+.play {
+    border: 1px solid white;
+    width: 30px;
+    height: 30px;
+    padding: 30px;
+    text-align: center;
+    user-select: none;
+    cursor: pointer;
+    color: white;
+    opacity: 0;
+    transition: .35s;
+}
+
+.play.ball {
+    background: #2ecc71;
+    opacity: 1;
+}
+
+.play.cross {
+    background: #e74c3c;
+    opacity: 1;
+}
+
+.buttons {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.btn {
+    width: 100px;
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+
+.btn.start {
+    background: #2ecc71;
+}
+
+.btn.stop {
+    background: #e74c3c;
+}

@@ -1,5 +1,5 @@
 # Projetos com javascript :rocket:
-Repositório com códigos de projetos criados com, HTML, CSS, e JavaScript.
+Repositório com códigos de projetos simples criados com, HTML, CSS, e JavaScript.
 
 ---
 
@@ -9,3 +9,5 @@ Repositório com códigos de projetos criados com, HTML, CSS, e JavaScript.
 2. [Calculadora básica](https://github.com/SkyG0D/projetos-js/tree/master/calculadora).
 3. [Carrosel de imagens](https://github.com/SkyG0D/projetos-js/tree/master/carrousel).
 4. [Cookies popup](https://github.com/SkyG0D/projetos-js/tree/master/cookies-popup).
+5. [Tic tac toe](https://github.com/SkyG0D/projetos-js/tree/master/tictactoe).
+6. [Cronômetro](https://github.com/SkyG0D/projetos-js/tree/master/cronometro).

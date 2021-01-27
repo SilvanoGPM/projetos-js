@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.win-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 1000%);
+
+    color: white;
+    text-shadow: 2px 0 0 black, -2px 0 0 black, 0 2px 0 black, 0 -2px 0 black, 1px 1px black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
+
+    width: 400px;
+    text-align: center;
+    font-size: 50px;
+}
+
+.win-message.animated {
+    animation: 3s text-animate;
+}
+
+.container {
+    outline: 20px solid #A0A0A0;
+    box-shadow: 0 0 10px 25px rgba(0, 0, 0, 0.8);
+    border: 4px solid rgb(25, 25, 175);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(auto-fit);
+}
+
+.button {
+    font-family: 'Amatic SC', cursive;
+    cursor: pointer;
+    box-sizing: border-box;
+    border: 4px solid rgb(25, 25, 175);
+    color: rgb(25, 25, 175);
+    background: rgba(52, 152, 219, 0.8);
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    user-select: none;
+    transition: 0.2s ease;
+}
+
+.button.correct {
+    background:rgb(9, 175, 9, 0.9);
+}
+
+.button.error-animate {
+    animation: 1.5s error-animate;
+}
+
+@keyframes error-animate {
+    0% {
+        
+        background: cyan;
+    }
+    30% {
+        background:rgba(214, 48, 49,1.0);
+    }
+    60% {
+        background: cyan;
+    }
+    100% {
+        background: rgba(214, 48, 49,1.0);
+    }
+}
+
+@keyframes text-animate {
+    0% {
+        transform: translate(-50%, 1000%);
+    }
+    20% {
+        transform: translate(-50%, -50%);
+    }
+    30% {
+        transform: translate(-50%, -50%);
+    }
+    40% {
+        transform: translate(-50%, -50%);
+    }
+    50% {
+        transform: translate(-50%, -50%);
+    }
+    60% {
+        transform: translate(-50%, -50%);
+    }
+    70% {
+        transform: translate(-50%, -50%);
+    }
+    100% {
+        transform: translate(-50%, -1000%);
+    }
+}

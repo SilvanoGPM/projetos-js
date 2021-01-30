@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table to CSV</title>
+    <link rel="stylesheet" href="table-to-csv.css" />
+  </head>
+  <body>
+    <div class="container">
+      <table data-js="anime-table" class="anime-table">
+        <thead>
+          <tr class="anime-table__row">
+            <th class="anime-table__head">Name</th>
+            <th class="anime-table__head anime-table__number">Episodes</th>
+            <th class="anime-table__head anime-table__number">Seasons</th>
+          </tr>
+        </thead>
+
+        <tr class="anime-table__row">
+          <td class="anime-table__data">Attack on Titan</td>
+          <td class="anime-table__data anime-table__number">81</td>
+          <td class="anime-table__data anime-table__number">4</td>
+        </tr>
+
+        <tbody>
+          <tr class="anime-table__row">
+            <td class="anime-table__data">Fullmetal Alchemist: Brotherhood</td>
+            <td class="anime-table__data anime-table__number">64</td>
+            <td class="anime-table__data anime-table__number">1</td>
+          </tr>
+
+          <tr class="anime-table__row">
+            <td class="anime-table__data">Your Lie in April</td>
+            <td class="anime-table__data anime-table__number">22</td>
+            <td class="anime-table__data anime-table__number">1</td>
+          </tr>
+
+          <tr class="anime-table__row">
+            <td class="anime-table__data">My Hero Academia</td>
+            <td class="anime-table__data anime-table__number">88</td>
+            <td class="anime-table__data anime-table__number">4</td>
+          </tr>
+
+          <tr class="anime-table__row">
+            <td class="anime-table__data">Haikyuu!!</td>
+            <td class="anime-table__data anime-table__number">85</td>
+            <td class="anime-table__data anime-table__number">4</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <a data-js="convert-btn" class="convert-btn"> Convert Table to CSV </a>
+    </div>
+
+    <script src="table-to-csv.js"></script>
+  </body>
+</html>

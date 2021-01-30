@@ -1,0 +1,47 @@
+body {
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.container {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.anime-table {
+    background-color: #a29bfe;
+    border-collapse: collapse;
+}
+
+.anime-table__head {
+    padding: 10px;
+    text-transform: uppercase;
+    background-color: #6c5ce7;
+}
+
+.anime-table__data {
+    padding: 10px 20px;
+}
+
+.anime-table__number {
+    text-align: right;
+}
+
+.convert-btn {
+    display: inline-block;
+    width: 200px;
+    color: #6c5ce7;
+    background-color: transparent;
+    border: 2px solid #6c5ce7;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: .25s ease;
+}
+
+.convert-btn:hover {
+    background-color: #6c5ce7;
+    color: #fff;
+}

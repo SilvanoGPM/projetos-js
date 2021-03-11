@@ -1,6 +1,6 @@
 const $winMessage = document.querySelector(".win-message");
 
-const elements = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const elements = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'];
 
 let selectedElements = [];
 let playing = true;
@@ -33,12 +33,13 @@ const errorAnimate = () => {
 }
 
 const elementClicked = (element, button) => {
-    console.log(element);
     if (selectedElements.indexOf(element) === -1 && playing) {
         selectedElements.push(element);
 
         const selectedIndex = selectedElements.indexOf(element);
         const index = elements.indexOf(element);
+
+        console.log(elements.indexOf(element));
 
         if (index === selectedIndex) {
             button.classList.add("correct");

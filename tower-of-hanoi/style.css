@@ -1,0 +1,141 @@
+body {
+    color: #8c7ae6;
+}
+
+label[for = "totalOfDisks"] {
+    font-size: 1.4rem;
+}
+
+#totalOfDisks {
+    width: 200px;
+    height: 25px;
+    border: 1px solid #8c7ae6;
+    color: #273c75;
+    font-size: 1.25rem;
+}
+
+.btn {
+    height: 35px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #9c88ff;
+    border: 1px solid #9c88ff;
+}
+
+.variant {
+    color: #273c75;
+}
+
+.moves {
+    font-size: 1.4rem;
+}
+
+.controls__moves::after {
+    content: '/';
+    margin: 0 10px 0 15px;
+}
+
+.game {
+    display: flex;
+    justify-content: center;
+}
+
+.tower {
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    width: 400px;
+    height: 250px;
+    padding: 20px;
+    padding-bottom: 22px;
+}
+
+.tower::before {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #581b00;
+    width: 96%;
+    height: 20px;
+    border-radius: 10px;
+}
+
+.tower::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+    width: 15px;
+    height: 80%;
+    background-color: #581b00;
+    border-radius: 10px;
+}
+
+.tower__2 {
+    margin: 0 10px;
+}
+
+.disk {
+    position: relative;
+    z-index: 1;
+    cursor: grab;
+    height: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.disk__1 {
+    background-color: #1abc9c;
+    width: 20%;
+    max-width: 140px;
+}
+
+.disk__2 {
+    background-color: #2ecc71;
+    width: 30%;
+    max-width: 160px;
+}
+
+.disk__3 {
+    background-color: #3498db;
+    width: 40%;
+    max-width: 180px;
+}
+
+.disk__4 {
+    background-color: #9b59b6;
+    width: 50%;
+    max-width: 200px;
+}
+
+.disk__5 {
+    background-color: #f1c40f;
+    width: 60%;
+    max-width: 220px;
+}
+
+.disk__6 {
+    background-color: #e67e22;
+    width: 70%;
+    max-width: 240px;
+}
+
+.disk__7 {
+    background-color: #e74c3c;
+    width: 80%;
+    max-width: 260px;
+}
+
+.disk__8 {
+    background-color: #34495e;
+    width: 90%;
+    max-width: 280px;
+}

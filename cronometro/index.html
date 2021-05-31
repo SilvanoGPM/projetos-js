@@ -1,28 +1,74 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cronômetro</title>
+    <link rel="stylesheet" href="cronometro.css" />
+  </head>
 
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Cronômetro</title>
-   <link rel="stylesheet" href="cronometro.css" />
-</head>
+  <body>
+    <label class="bars" for="navbarToggler"><i class="fas fa-bars"></i></label>
+    <input id="navbarToggler" type="checkbox" />
+    <label class="close" for="navbarToggler"
+      ><i class="fas fa-times"></i
+    ></label>
 
-<body>
-   <h1>Cronômetro</h1>
+    <nav class="navbar">
+      <h2 class="navbar__title">Projetos</h2>
 
-   <div class="cronometro-container">
+      <ul class="navbar__links">
+        <li class="navbar__item">
+          <a class="navbar__link" href="/calculadora/">Calculadora</a>
+        </li>
+        <li class="navbar__item">
+          <a class="navbar__link" href="/carousel/">Carrosel</a>
+        </li>
+        <li class="navbar__item">
+          <a class="navbar__link" href="/cookies-popup/">Popup</a>
+        </li>
+        <li class="navbar__item">
+          <a class="navbar__link" href="/cronometro/">Cronomêtro</a>
+        </li>
+        <li class="navbar__item">
+          <a class="navbar__link" href="/rock-paper-scissor/"
+            >Pedra, papel e tesoura</a
+          >
+        </li>
+        <li class="navbar__item">
+          <a class="navbar__link" href="/sequential-game/"
+            >Sequência numérica</a
+          >
+        </li>
+        <li class="navbar__item">
+          <a class="navbar__link" href="/table-to-csv/">Tabela para CSV</a>
+        </li>
+        <li class="navbar__item">
+          <a class="navbar__link" href="/tictactoe/">Jogo da velha</a>
+        </li>
+        <li class="navbar__item">
+          <a class="navbar__link" href="/tower-of-hanoi/">Torre de Hanoi</a>
+        </li>
+      </ul>
+    </nav>
+
+    <h1>Cronômetro</h1>
+
+    <div class="cronometro-container">
       <div class="cronometro">
-         <div class="tempo" data-js="tempo">00:00:00</div>
-         <div class="controle">
-            <button class="btn iniciar">Iniciar</button>
-            <button class="btn zerar">Zerar</button>
-            <button class="btn parar">Parar</button>
-         </div>
+        <div class="tempo" data-js="tempo">00:00:00</div>
+        <div class="controle">
+          <button class="btn iniciar">Iniciar</button>
+          <button class="btn zerar">Zerar</button>
+          <button class="btn parar">Parar</button>
+        </div>
       </div>
-   </div>
+    </div>
 
-   <script src="cronometro.js"></script>
-</body>
-
+    <script
+      src="https://kit.fontawesome.com/a7cdc2ea18.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="cronometro.js"></script>
+  </body>
 </html>

@@ -13,3 +13,4 @@ Repositório com códigos de projetos simples criados com, HTML, CSS, e JavaScri
 6. [Cronômetro](https://github.com/SkyG0D/projetos-js/tree/master/cronometro).
 7. [Sequential Game](https://github.com/SkyG0D/projetos-js/tree/master/sequential-game).
 8. [Table to CSV](https://github.com/SkyG0D/projetos-js/tree/master/table-to-csv).
+9. [Tower of Hanoi](https://github.com/SkyG0D/projetos-js/tree/master/tower-of-hanoi).

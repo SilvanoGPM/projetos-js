@@ -1,3 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
+.navbar {
+  font-family: 'Rubik', sans-serif;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  right: -300px;
+  background-color: #191919;
+  width: 300px;
+  height: 100%;
+  overflow-y: auto;
+  transition: 0.15s ease-in;
+}
+
+.navbar__title {
+  background-color: #131313;
+  color: #dbdada;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  user-select: none;
+  margin: 0;
+  padding: 20px 0;
+}
+
+.navbar__links {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.navbar__item {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid #000;
+  padding: 20px 0 20px 30px;
+  margin: 0;
+}
+
+.navbar__link {
+  color: #fff;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.navbar__link:hover {
+  text-decoration: underline;
+}
+
+.bars {
+  z-index: 9998;
+  position: fixed;
+  right: 50px;
+  top: 18px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #000;
+}
+
+.close {
+  position: fixed;
+  z-index: 10000;
+  right: -275px;
+  top: 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #fff;
+  transition: 0.15s ease-out;
+}
+
+.close:hover {
+  color: #e74c3c;
+}
+
+#navbarToggler {
+  display: none;
+}
+
+#navbarToggler:checked ~ .close {
+  right: 275px;
+}
+
+#navbarToggler:checked ~ .navbar {
+  right: 0;
+  transition: 0.15s ease-out;
+}
+
 .carousel-container {
     width: 100%;
 }

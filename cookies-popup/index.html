@@ -1,28 +1,82 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cookies Popup</title>
+    <link rel="stylesheet" href="cookies.css" />
+  </head>
 
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Cookies Popup</title>
-   <link rel="stylesheet" href="cookies.css" />
-</head>
+  <body>
+    <label class="bars" for="navbarToggler"><i class="fas fa-bars"></i></label>
+    <input id="navbarToggler" type="checkbox" />
+    <label class="close" for="navbarToggler"
+      ><i class="fas fa-times"></i
+    ></label>
 
-<body>
+    <nav class="navbar">
+      <h2 class="navbar__title">Projetos</h2>
 
-   <div class="cookies-container">
+      <ul class="navbar__links">
+        <li class="navbar__item">
+          <a class="navbar__link" href="/calculadora/">Calculadora</a>
+        </li>
+        <li class="navbar__item">
+          <a class="navbar__link" href="/carousel/">Carrosel</a>
+        </li>
+        <li class="navbar__item">
+          <a class="navbar__link" href="/cookies-popup/">Popup</a>
+        </li>
+        <li class="navbar__item">
+          <a class="navbar__link" href="/cronometro/">Cronomêtro</a>
+        </li>
+        <li class="navbar__item">
+          <a class="navbar__link" href="/rock-paper-scissor/"
+            >Pedra, papel e tesoura</a
+          >
+        </li>
+        <li class="navbar__item">
+          <a class="navbar__link" href="/sequential-game/"
+            >Sequência numérica</a
+          >
+        </li>
+        <li class="navbar__item">
+          <a class="navbar__link" href="/table-to-csv/">Tabela para CSV</a>
+        </li>
+        <li class="navbar__item">
+          <a class="navbar__link" href="/tictactoe/">Jogo da velha</a>
+        </li>
+        <li class="navbar__item">
+          <a class="navbar__link" href="/tower-of-hanoi/">Torre de Hanoi</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="cookies-container">
       <div class="cookies-content">
-         <p>Permito o uso de cookies para:</p>
-         <div class="cookies-pref">
-            <label><input type="checkbox" checked data-function="analytics" />Análise de uso</label>
-            <label><input type="checkbox" checked data-function="marketing" />Marketing</label>
-         </div>
+        <p>Permito o uso de cookies para:</p>
+        <div class="cookies-pref">
+          <label
+            ><input type="checkbox" checked data-function="analytics" />Análise
+            de uso</label
+          >
+          <label
+            ><input
+              type="checkbox"
+              checked
+              data-function="marketing"
+            />Marketing</label
+          >
+        </div>
 
-         <button class="cookies-save">Salvar e Continuar</button>
+        <button class="cookies-save">Salvar e Continuar</button>
       </div>
-   </div>
+    </div>
 
-   <script src="cookies.js"></script>
-</body>
-
+    <script
+      src="https://kit.fontawesome.com/a7cdc2ea18.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="cookies.js"></script>
+  </body>
 </html>

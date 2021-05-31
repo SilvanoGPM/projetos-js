@@ -1,52 +1,112 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pedra, Papel e Tesoura</title>
 
     <link rel="stylesheet" href="style.css" />
     <script src="script.js"></script>
-</head>
+  </head>
 
-<body>
+  <body>
+    <label class="bars" for="navbarToggler"><i class="fas fa-bars"></i></label>
+    <input id="navbarToggler" type="checkbox" />
+    <label class="close" for="navbarToggler"
+      ><i class="fas fa-times"></i
+    ></label>
+
+    <nav class="navbar">
+      <h2 class="navbar__title">Projetos</h2>
+
+      <ul class="navbar__links">
+        <li class="navbar__item">
+          <a class="navbar__link" href="/calculadora/">Calculadora</a>
+        </li>
+        <li class="navbar__item">
+          <a class="navbar__link" href="/carousel/">Carrosel</a>
+        </li>
+        <li class="navbar__item">
+          <a class="navbar__link" href="/cookies-popup/">Popup</a>
+        </li>
+        <li class="navbar__item">
+          <a class="navbar__link" href="/cronometro/">Cronomêtro</a>
+        </li>
+        <li class="navbar__item">
+          <a class="navbar__link" href="/rock-paper-scissor/"
+            >Pedra, papel e tesoura</a
+          >
+        </li>
+        <li class="navbar__item">
+          <a class="navbar__link" href="/sequential-game/"
+            >Sequência numérica</a
+          >
+        </li>
+        <li class="navbar__item">
+          <a class="navbar__link" href="/table-to-csv/">Tabela para CSV</a>
+        </li>
+        <li class="navbar__item">
+          <a class="navbar__link" href="/tictactoe/">Jogo da velha</a>
+        </li>
+        <li class="navbar__item">
+          <a class="navbar__link" href="/tower-of-hanoi/">Torre de Hanoi</a>
+        </li>
+      </ul>
+    </nav>
 
     <h1>Pedra, Papel e Tesoura</h1>
 
     <div id="botao">
-        <button onclick="start();">Jogar</button>
+      <button onclick="start();">Jogar</button>
     </div>
 
     <span id="resultado"></span>
     <div id="view">
-        <div id="player" class="opcoes">
-            <img id="player0" src="img/rock.png" alt="Pedra" onmouseover="changeStyle(0, this)"
-                onmouseout="changeStyle(1, this);" onclick="selectOption(0);" />
+      <div id="player" class="opcoes">
+        <img
+          id="player0"
+          src="img/rock.png"
+          alt="Pedra"
+          onmouseover="changeStyle(0, this)"
+          onmouseout="changeStyle(1, this);"
+          onclick="selectOption(0);"
+        />
 
-            <img id="player1" src="img/paper.png" alt="Papel" onmouseover="changeStyle(0, this)"
-                onmouseout="changeStyle(1, this);" onclick="selectOption(1);" />
+        <img
+          id="player1"
+          src="img/paper.png"
+          alt="Papel"
+          onmouseover="changeStyle(0, this)"
+          onmouseout="changeStyle(1, this);"
+          onclick="selectOption(1);"
+        />
 
-            <img id="player2" src="img/scissor.png" alt="Tesoura" onmouseover="changeStyle(0, this)"
-                onmouseout="changeStyle(1, this);" onclick="selectOption(2);" />
+        <img
+          id="player2"
+          src="img/scissor.png"
+          alt="Tesoura"
+          onmouseover="changeStyle(0, this)"
+          onmouseout="changeStyle(1, this);"
+          onclick="selectOption(2);"
+        />
+      </div>
+      <p>Player</p>
 
-        </div>
-        <p>Player</p>
+      <span id="versus"> X </span>
 
-        <span id="versus">
-            X
-        </span>
+      <p>Bot</p>
+      <div id="bot" class="opcoes">
+        <img id="bot0" src="img/rock.png" alt="Pedra" />
 
-        <p>Bot</p>
-        <div id="bot" class="opcoes">
-            <img id="bot0" src="img/rock.png" alt="Pedra" />
+        <img id="bot1" src="img/paper.png" alt="Papel" />
 
-            <img id="bot1" src="img/paper.png" alt="Papel" />
-
-            <img id="bot2" src="img/scissor.png" alt="Tesoura" />
-        </div>
+        <img id="bot2" src="img/scissor.png" alt="Tesoura" />
+      </div>
     </div>
 
-</body>
-
+    <script
+      src="https://kit.fontawesome.com/a7cdc2ea18.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

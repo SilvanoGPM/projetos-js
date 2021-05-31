@@ -7,6 +7,50 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <label class="bars" for="navbarToggler"><i class="fas fa-bars"></i></label>
+    <input id="navbarToggler" type="checkbox" />
+    <label class="close" for="navbarToggler"
+      ><i class="fas fa-times"></i
+    ></label>
+
+    <nav class="navbar">
+      <h2 class="navbar__title">Projetos</h2>
+
+      <ul class="navbar__links">
+        <li class="navbar__item">
+          <a class="navbar__link" href="/calculadora/">Calculadora</a>
+        </li>
+        <li class="navbar__item">
+          <a class="navbar__link" href="/carousel/">Carrosel</a>
+        </li>
+        <li class="navbar__item">
+          <a class="navbar__link" href="/cookies-popup/">Popup</a>
+        </li>
+        <li class="navbar__item">
+          <a class="navbar__link" href="/cronometro/">Cronomêtro</a>
+        </li>
+        <li class="navbar__item">
+          <a class="navbar__link" href="/rock-paper-scissor/"
+            >Pedra, papel e tesoura</a
+          >
+        </li>
+        <li class="navbar__item">
+          <a class="navbar__link" href="/sequential-game/"
+            >Sequência numérica</a
+          >
+        </li>
+        <li class="navbar__item">
+          <a class="navbar__link" href="/table-to-csv/">Tabela para CSV</a>
+        </li>
+        <li class="navbar__item">
+          <a class="navbar__link" href="/tictactoe/">Jogo da velha</a>
+        </li>
+        <li class="navbar__item">
+          <a class="navbar__link" href="/tower-of-hanoi/">Torre de Hanoi</a>
+        </li>
+      </ul>
+    </nav>
+
     <div class="controls">
       <label for="totalOfDisks">Discos:</label>
       <input id="totalOfDisks" type="number" min="3" max="8" value="3" />
@@ -14,10 +58,14 @@
       <button class="btn controls__restart">Reiniciar</button>
       <button class="btn controls__resolve">Resolver</button>
 
-      <div class="moves" >
-        <span class="controls__moves"> Movimentos: <strong class="variant" >0</strong></span>
+      <div class="moves">
+        <span class="controls__moves">
+          Movimentos: <strong class="variant">0</strong></span
+        >
 
-        <span class="controls__minimum"> Mínimo de movimentos: <strong class="variant" >7</strong></span>
+        <span class="controls__minimum">
+          Mínimo de movimentos: <strong class="variant">7</strong></span
+        >
       </div>
     </div>
 
@@ -29,6 +77,10 @@
       <div class="tower tower__3"></div>
     </section>
 
+    <script
+      src="https://kit.fontawesome.com/a7cdc2ea18.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="script.js"></script>
   </body>
 </html>

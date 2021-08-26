@@ -1,228 +1,141 @@
-@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap");
-
 body {
-    color: #8c7ae6;
+  color: #8c7ae6;
 }
 
-.navbar {
-  font-family: "Rubik", sans-serif;
-  position: fixed;
-  z-index: 9999;
-  top: 0;
-  right: -300px;
-  background-color: #191919;
-  width: 300px;
-  height: 100%;
-  overflow-y: auto;
-  transition: 0.15s ease-in;
-}
-
-.navbar__title {
-  background-color: #131313;
-  color: #dbdada;
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 1.8rem;
-  user-select: none;
-  margin: 0;
-  padding: 20px 0;
-}
-
-.navbar__links {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-.navbar__item {
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-  border-bottom: 1px solid #000;
-  padding: 20px 0 20px 30px;
-  margin: 0;
-}
-
-.navbar__link {
-  color: #fff;
-  font-size: 1.5rem;
-  text-decoration: none;
-}
-
-.navbar__link:hover {
-  text-decoration: underline;
-}
-
-.bars {
-  z-index: 9998;
-  position: fixed;
-  right: 50px;
-  top: 18px;
-  font-size: 1.5rem;
-  cursor: pointer;
-  color: #000;
-}
-
-.close {
-  position: fixed;
-  z-index: 10000;
-  right: -275px;
-  top: 10px;
-  font-size: 1.2rem;
-  cursor: pointer;
-  color: #fff;
-  transition: 0.15s ease-out;
-}
-
-.close:hover {
-  color: #e74c3c;
-}
-
-#navbarToggler {
-  display: none;
-}
-
-#navbarToggler:checked ~ .close {
-  right: 275px;
-}
-
-#navbarToggler:checked ~ .navbar {
-  right: 0;
-  transition: 0.15s ease-out;
-}
-
-label[for = "totalOfDisks"] {
-    font-size: 1.4rem;
+label[for="totalOfDisks"] {
+  font-size: 1.4rem;
 }
 
 #totalOfDisks {
-    width: 200px;
-    height: 25px;
-    border: 1px solid #8c7ae6;
-    color: #273c75;
-    font-size: 1.25rem;
+  width: 200px;
+  height: 25px;
+  border: 1px solid #8c7ae6;
+  color: #273c75;
+  font-size: 1.25rem;
 }
 
 .btn {
-    height: 35px;
-    border: none;
-    cursor: pointer;
-    font-size: 1.2rem;
-    color: #fff;
-    background-color: #9c88ff;
-    border: 1px solid #9c88ff;
+  height: 35px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: #9c88ff;
+  border: 1px solid #9c88ff;
 }
 
 .variant {
-    color: #273c75;
+  color: #273c75;
 }
 
 .moves {
-    font-size: 1.4rem;
+  font-size: 1.4rem;
 }
 
 .controls__moves::after {
-    content: '/';
-    margin: 0 10px 0 15px;
+  content: "/";
+  margin: 0 10px 0 15px;
 }
 
 .game {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .tower {
-    position: relative;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    width: 400px;
-    height: 250px;
-    padding: 20px;
-    padding-bottom: 22px;
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  width: 400px;
+  height: 250px;
+  padding: 20px;
+  padding-bottom: 22px;
 }
 
 .tower::before {
-    content: '';
-    position: absolute;
-    bottom: 2px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #581b00;
-    width: 96%;
-    height: 20px;
-    border-radius: 10px;
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #581b00;
+  width: 96%;
+  height: 20px;
+  border-radius: 10px;
 }
 
 .tower::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    bottom: 10px;
-    transform: translateX(-50%);
-    width: 15px;
-    height: 80%;
-    background-color: #581b00;
-    border-radius: 10px;
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  transform: translateX(-50%);
+  width: 15px;
+  height: 80%;
+  background-color: #581b00;
+  border-radius: 10px;
 }
 
 .tower__2 {
-    margin: 0 10px;
+  margin: 0 10px;
 }
 
 .disk {
-    position: relative;
-    z-index: 1;
-    cursor: grab;
-    height: 15px;
-    border: 1px solid rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
+  position: relative;
+  z-index: 1;
+  cursor: grab;
+  height: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
 }
 
 .disk__1 {
-    background-color: #1abc9c;
-    width: 20%;
-    max-width: 140px;
+  background-color: #1abc9c;
+  width: 20%;
+  max-width: 140px;
 }
 
 .disk__2 {
-    background-color: #2ecc71;
-    width: 30%;
-    max-width: 160px;
+  background-color: #2ecc71;
+  width: 30%;
+  max-width: 160px;
 }
 
 .disk__3 {
-    background-color: #3498db;
-    width: 40%;
-    max-width: 180px;
+  background-color: #3498db;
+  width: 40%;
+  max-width: 180px;
 }
 
 .disk__4 {
-    background-color: #9b59b6;
-    width: 50%;
-    max-width: 200px;
+  background-color: #9b59b6;
+  width: 50%;
+  max-width: 200px;
 }
 
 .disk__5 {
-    background-color: #f1c40f;
-    width: 60%;
-    max-width: 220px;
+  background-color: #f1c40f;
+  width: 60%;
+  max-width: 220px;
 }
 
 .disk__6 {
-    background-color: #e67e22;
-    width: 70%;
-    max-width: 240px;
+  background-color: #e67e22;
+  width: 70%;
+  max-width: 240px;
 }
 
 .disk__7 {
-    background-color: #e74c3c;
-    width: 80%;
-    max-width: 260px;
+  background-color: #e74c3c;
+  width: 80%;
+  max-width: 260px;
 }
 
 .disk__8 {
-    background-color: #34495e;
-    width: 90%;
-    max-width: 280px;
+  background-color: #34495e;
+  width: 90%;
+  max-width: 280px;
 }

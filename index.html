@@ -1,92 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SkyG0D - Projetos JS</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
 
-    <header class="header" >
-        <h1 class="title" >Projetos JS</h1>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkyG0D - Projetos JS</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-    <label class="bars" for="navbarToggler"><i class="fas fa-bars"></i></label>
-    <input id="navbarToggler" type="checkbox" />
-    <label class="close" for="navbarToggler"><i class="fas fa-times"></i></label>
+<body>
 
-    <nav class="navbar">
-      <h2 class="navbar__title">Projetos</h2>
+  <header class="header">
+    <h1 class="title">Projetos JS</h1>
+  </header>
 
-      <ul class="navbar__links">
-        <li class="navbar__item">
-          <a class="navbar__link" href="calculadora/">Calculadora</a>
-        </li>
-        <li class="navbar__item">
-          <a class="navbar__link" href="carousel/">Carrosel</a>
-        </li>
-        <li class="navbar__item">
-          <a class="navbar__link" href="cookies-popup/">Popup</a>
-        </li>
-        <li class="navbar__item">
-          <a class="navbar__link" href="cronometro/">Cronomêtro</a>
-        </li>
-        <li class="navbar__item">
-          <a class="navbar__link" href="rock-paper-scissor/"
-            >Pedra, papel e tesoura</a
-          >
-        </li>
-        <li class="navbar__item">
-          <a class="navbar__link" href="sequential-game/">Sequência numérica</a>
-        </li>
-        <li class="navbar__item">
-          <a class="navbar__link" href="table-to-csv/">Tabela para CSV</a>
-        </li>
-        <li class="navbar__item">
-          <a class="navbar__link" href="tictactoe/">Jogo da velha</a>
-        </li>
-        <li class="navbar__item">
-          <a class="navbar__link" href="tower-of-hanoi/">Torre de Hanoi</a>
-        </li>
-      </ul>
-    </nav>
+  <label class="bars" for="navbarToggler"><i class="fas fa-bars"></i></label>
+  <input id="navbarToggler" type="checkbox" />
+  <label class="close" for="navbarToggler"><i class="fas fa-times"></i></label>
 
-    <section class="content" >
-        <article class="info" >
+  <nav class="navbar">
+    <h2 class="navbar__title">Projetos</h2>
 
-            <div class="questions" >
-                <h2>Perguntas frequentes:</h2>
+    <ul class="navbar__links">
 
-                <h3>Como ver os projetos?</h3>
+      <li class="navbar__item">
+        <button data-button="calculadora" class="navbar__link">
+          Calculadora
+        </button>
+      </li>
 
-                <p>
-                    Para visualizar os projetos você deve clicar no menu ao lado,
-                    isso abrirá uma sidebar para você escolher o projeto que deseja visualizar.
-                </p>
+      <li class="navbar__item">
+        <button data-button="carousel" class="navbar__link">
+          Carousel
+        </button>
+      </li>
 
-                <p>
-                    Caso queria visualizar o código fonte dos projetos, eles
-                    estão disponíveis <a href="https://github.com/SkyG0D/projetos-js">neste respositório</a>.
-                </p>
 
-                <h3>Como reportar bugs?</h3>
+      <li class="navbar__item">
+        <button data-button="cookies-popup" class="navbar__link">
+          Cookies popup
+        </button>
+      </li>
 
-                <p>
-                    Caso ache algum bug em um projeto, você pode abrir um pull request no github
-                    ou tentar me contatar diretamente usando o email silvanosilvino1@gmail.com.
-                </p>
 
-                <h3>O que são os projetos?</h3>
-                <p>
-                    Os projetos variam desde desafios até algo que eu somente estava com
-                    vontande de criar.
-                </p>
-            </div>
-        </article>
-    </section>
+      <li class="navbar__item">
+        <button data-button="cronometro" class="navbar__link">
+          Cronometro
+        </button>
+      </li>
 
-    <script src="https://kit.fontawesome.com/a7cdc2ea18.js" crossorigin="anonymous"></script>
-  </body>
+
+      <li class="navbar__item">
+        <button data-button="faq" class="navbar__link">
+          Faq
+        </button>
+      </li>
+
+
+      <li class="navbar__item">
+        <button data-button="rock-paper-scissor" class="navbar__link">
+          Rock paper scissor
+        </button>
+      </li>
+
+
+      <li class="navbar__item">
+        <button data-button="sequential-game" class="navbar__link">
+          Sequential game
+        </button>
+      </li>
+
+
+      <li class="navbar__item">
+        <button data-button="table-to-csv" class="navbar__link">
+          Table to csv
+        </button>
+      </li>
+
+
+      <li class="navbar__item">
+        <button data-button="tictactoe" class="navbar__link">
+          Tictactoe
+        </button>
+      </li>
+
+
+      <li class="navbar__item">
+        <button data-button="tower-of-hanoi" class="navbar__link">
+          Tower of hanoi
+        </button>
+      </li>
+
+    </ul>
+  </nav>
+
+  <div class="iframe-container">
+    <iframe width="100%" height="800px" id="projects-iframe">
+
+    </iframe>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="https://kit.fontawesome.com/a7cdc2ea18.js" crossorigin="anonymous"></script>
+</body>
+
 </html>

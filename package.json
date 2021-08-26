@@ -1,0 +1,11 @@
+{
+  "name": "projetos-js",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/SkyG0D/projetos-js.git",
+  "author": "SkyG0D <silvanosilvino@hotmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  }
+}

@@ -29,7 +29,9 @@ function getAllProjects(projectsPath) {
   }
 
   const projects = readdirSync(projectsPath)
-    .filter((project) => statSync(project).isDirectory() && !project.startsWith('.'));
+    .filter((project) =>
+      statSync(project).isDirectory() && !project.startsWith('.')
+    );
 
   return projects;
 }
@@ -72,9 +74,7 @@ function generateHTMLNavbar(pathToHtml, projectsPath) {
         <button data-button="${project}" class="navbar__link">
           ${formatProjectName(project)}
         </button>
-      </li>
-      `
-    ));
+      </li>`));
 
   const navbar = `<nav class="navbar">
     <h2 class="navbar__title">Projetos</h2>
@@ -82,6 +82,7 @@ function generateHTMLNavbar(pathToHtml, projectsPath) {
     <ul class="navbar__links">
       ${projects.join('\n')}
     </ul>
+
   </nav>`;
 
   const htmlHeader = html.slice(0, index);

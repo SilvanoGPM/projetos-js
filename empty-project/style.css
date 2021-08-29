@@ -1,0 +1,11 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 90vh;
+  color: #191919;
+}
+
+h1 {
+  text-align: center;
+}

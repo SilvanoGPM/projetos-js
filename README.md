@@ -6,15 +6,16 @@ Repositório com códigos de projetos simples criados com, HTML, CSS, e JavaScri
 ## Projetos
 
 1. [Pedra, papel e tesoura](https://github.com/SkyG0D/projetos-js/tree/master/rock-paper-scissor).
-2. [Calculadora básica](https://github.com/SkyG0D/projetos-js/tree/master/calculadora).
+2. [Calculadora básica](https://github.com/SkyG0D/projetos-js/tree/master/calculator).
 3. [Carrosel de imagens](https://github.com/SkyG0D/projetos-js/tree/master/carousel).
 4. [Cookies popup](https://github.com/SkyG0D/projetos-js/tree/master/cookies-popup).
-5. [Tic tac toe](https://github.com/SkyG0D/projetos-js/tree/master/tictactoe).
-6. [Cronômetro](https://github.com/SkyG0D/projetos-js/tree/master/cronometro).
-7. [Sequential Game](https://github.com/SkyG0D/projetos-js/tree/master/sequential-game).
-8. [Table to CSV](https://github.com/SkyG0D/projetos-js/tree/master/table-to-csv).
-9. [Tower of Hanoi](https://github.com/SkyG0D/projetos-js/tree/master/tower-of-hanoi).
-
+5. [Jogo da Velha](https://github.com/SkyG0D/projetos-js/tree/master/tictactoe).
+6. [Cronômetro](https://github.com/SkyG0D/projetos-js/tree/master/timer).
+7. [Jogo Sequencial](https://github.com/SkyG0D/projetos-js/tree/master/sequential-game).
+8. [Tabela HTML para .CSV](https://github.com/SkyG0D/projetos-js/tree/master/table-to-csv).
+9. [Torre de Hanoi](https://github.com/SkyG0D/projetos-js/tree/master/tower-of-hanoi).
+10. [Gerador de Senhas](https://github.com/SkyG0D/projetos-js/tree/master/password-generator).
+11. [Efeito Matrix](https://github.com/SkyG0D/projetos-js/tree/master/matrix-effect).
 
 ## Gerando lista de projetos dinamicamente
 

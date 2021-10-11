@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password generator</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="wrapper">
+    <h1>Password Generator</h1>
+
+    <div class="random-password">
+      <p>Password: <span id="pass" class="password" data-js="password">fqkfqfk</span></p>
+      <button>Generate Password</button>
+
+      <input type="range" id="range" value="8" min="8" max="50" />
+      <p>Password length: <small data-js="password-length" class="password-length">8</small></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

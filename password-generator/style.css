@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+body {
+  font-family: 'Orbitron';
+  background: #191919;
+}
+
+.wrapper {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: green;
+}
+
+.random-password {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #333333;
+  padding: 1em;
+  box-shadow: 3px 3px 3px green;
+  color: green;
+}
+
+.random-password p {
+  word-break: break-word;
+}
+
+.password {
+  text-decoration: underline;
+  color: rgba(0, 255, 0, 0.7);
+}
+
+.message {
+  display: none;
+}
+
+.random-password button {
+  width: 50%;
+  margin: 20px auto;
+  padding: 0.5em;
+  border: 1px solid green;
+  color: green;
+  background: #191919;
+  box-shadow: 1px 1px 10px green;
+  text-transform: uppercase;
+  font-family: 'Orbitron';
+  cursor: pointer;
+}
+
+#range {
+  outline: none;
+  background: transparent;
+}
+
+input[type=range]::-webkit-slider-thumb,
+input[type=range]::-moz-range-thumb{
+  height: 16px;
+  width: 16px;
+  box-shadow: 3px 3px 3px green;
+  border: 1px solid green;
+  border-radius: 30px;
+  background: #191919;
+  cursor: pointer;
+  margin-top: -14px;
+  box-shadow: 1px 1px 1px #000000;
+}
+
+input[type=range]::-webkit-slider-runnable-track,
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  background: rgba(0, 255, 0, 0.3);
+  border-radius: 1.3px;
+}
+
+::selection {
+  background: green;
+  color: black;
+}
+
+@media (max-width: 450px) {
+  .random-password {
+    max-width: 80vw;
+    min-width: 200px;
+  }
+}

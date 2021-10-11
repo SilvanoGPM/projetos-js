@@ -165,7 +165,6 @@ window.addEventListener('load', () => {
     btnPrevious,
     switchTime: 2000,
     visibleCSSClass: 'carousel__item--visible',
-    reverseMode: true,
     placeholderCSSClass: 'ball',
     placeholdersContainer,
     placeholderVisibleCSSClass: 'ball--selected',

@@ -148,8 +148,30 @@ body {
 
 .project-selected {
   background-color: var(--white);
+  position: relative;
 }
 
+.project-selected::after,
+.project-selected::before {
+  --size: 20px;
+  content: '';
+  position: absolute;
+  left: 0;
+  display: block;
+  width: var(--size);
+  height: var(--size);
+  background-color: var(--white);
+}
+
+.project-selected::after {
+  bottom: calc(var(--size) * -1);
+  border-bottom-right-radius: 50%;
+}
+
+.project-selected::before {
+  top: calc(var(--size) * -1);
+  border-top-right-radius: 50%;
+}
 
 .project-selected button {
   color: var(--gray);

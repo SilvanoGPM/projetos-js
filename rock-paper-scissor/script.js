@@ -1,76 +1,119 @@
-let selectedOption;
-let playing = false;
+const SELECTED_OPTION_CSS_CLASS = 'selected';
 
-function changeStyle(opt, element) {
-    if (!playing) {
-        if (opt === 0) {
-            element.style.transform = 'scale(1.3)';
-            element.style.opacity = '1';
-        } else if (!(selectedOption >= 0) || (document.getElementById("player" + selectedOption).id !== element.id)) {
-            element.style.transform = 'scale(1.0)';
-            element.style.opacity = '0.8';
-        }
+const $playerOptions = document.querySelectorAll('[data-play]');
+const $botOptions = document.querySelectorAll('[data-bot-play]');
+
+const $message = document.querySelector('[data-js="message"]');
+const $playerWins = document.querySelector('[data-js="player-wins"]');
+const $botWins = document.querySelector('[data-js="bot-wins"]');
+
+const state = {
+  playing: false,
+  botWins: 0,
+  playerWins: 0,
+};
+
+const botOptions = ['rock', 'paper', 'scissor'];
+
+const wins = {
+  'rock&scissor': true,
+  'paper&rock': true,
+  'scissor&paper': true,
+};
+
+function setMessage(message) {
+  $message.textContent = message;
+}
+
+function getBotOption() {
+  const randomIndex = Math.floor(Math.random() * 3);
+  return botOptions[randomIndex];
+}
+
+function removeSelectdStyle($arr) {
+  $arr.forEach(($option) => {
+    $option.classList.remove(SELECTED_OPTION_CSS_CLASS);
+  });
+}
+
+function setSelectedPlayerOption(button) {
+  removeSelectdStyle($playerOptions);
+  button.classList.add(SELECTED_OPTION_CSS_CLASS);
+}
+
+function setSelectedBotOption(option) {
+  $botOptions.forEach(($option) => {
+    $option.classList.remove(SELECTED_OPTION_CSS_CLASS);
+
+    const value = $option.getAttribute('data-bot-play');
+
+    if (value === option) {
+      $option.classList.add(SELECTED_OPTION_CSS_CLASS);
     }
+  });
 }
 
-function selectOption(opt) {
-    document.querySelector("#resultado").innerHTML = "";
-    if (selectedOption >= 0) {
-        document.querySelector("#player" + selectedOption).style.transform = 'scale(1.0)';
-        document.querySelector("#player" + selectedOption).style.opacity = '0.8';
+function getMessage(isPlayerWinner, isDraw) {
+  if (isDraw) {
+    return 'Empatou!';
+  }
+
+  return isPlayerWinner
+    ? 'Jogador venceu!'
+    : 'Bot venceu!';
+}
+
+function updateWins() {
+  $botWins.textContent = `Vitórias: ${state.botWins}`;
+  $playerWins.textContent = `Vitórias: ${state.playerWins}`;
+}
+
+function incrementWin(isPlayerWinner, isDraw) {
+  if (isDraw) {
+    return;
+  } else if (isPlayerWinner) {
+    state.playerWins += 1;
+  } else {
+    state.botWins += 1;
+  }
+
+  updateWins();
+}
+
+function unselectOptions() {
+  removeSelectdStyle($playerOptions);
+  removeSelectdStyle($botOptions);
+}
+
+$playerOptions.forEach(($option) => {
+  $option.addEventListener('click', (event) => {
+    if (!state.playing) {
+      state.playing = true;
+
+      setMessage('Calculando vencedor...');
+
+      const button = event.target.parentElement;
+
+      const playerValue = button.getAttribute('data-play');
+      const botValue = getBotOption();
+
+      setSelectedPlayerOption(button);
+      setSelectedBotOption(botValue);
+
+      const playValue = `${playerValue}&${botValue}`;
+      const isDraw = playerValue === botValue;
+      const isPlayerWinner = wins[playValue];
+
+      const message = getMessage(isPlayerWinner, isDraw);
+
+      setTimeout(() => {
+        setMessage(message);
+        incrementWin(isPlayerWinner, isDraw);
+        unselectOptions();
+
+        state.playing = false;
+      }, 1000)
+
     }
-
-    selectedOption = opt;
-    document.querySelector("#player" + selectedOption).style.transform = 'scale(1.3)';
-    document.querySelector("#player" + selectedOption).style.opacity = '1';
-}
-
-function start() {
-    if (selectedOption >= 0 && selectedOption != null) {
-        playing = true;
-        window.location.href = "#view";
-        document.querySelector("#resultado").innerHTML = '';
-        const botOpt = getBotValue();
-
-        document.querySelector("#bot" + botOpt).style.transform = 'scale(1.3)';
-        document.querySelector("#bot" + botOpt).style.opacity = '1';
-        document.querySelector("#resultado").innerHTML = "Verificando...";
-
-        setTimeout(function () {
-            const result = verifyResult(selectedOption, botOpt);
-
-            document.querySelector("#resultado").innerHTML = result;
-
-            document.querySelector("#player" + selectedOption).style.transform = 'scale(1.0)';
-            document.querySelector("#player" + selectedOption).style.opacity = '0.8';
-            selectedOption = -1;
-            document.querySelector("#bot" + botOpt).style.transform = 'scale(1.0)';
-            document.querySelector("#bot" + botOpt).style.opacity = '0.8';
-            playing = false;
-        }, 2000);
-
-    } else {
-        document.querySelector("#resultado").innerHTML = "Selecione uma opção!";
-    }
-}
-
-function getBotValue() {
-    return Math.round(Math.random() * 2);
-}
-
-function verifyResult(player, bot) {
-    if (player === bot) return "Empate";
-
-    return results[(player + "" + bot)];
-
-}
-
-const results = {
-    '01': 'Bot Win',
-    '02': 'Player Win',
-    '10': 'Player Win',
-    '12': 'Bot Win',
-    '20': 'Bot Win',
-    '21': 'Player Win'
-}
-
+  });
+});

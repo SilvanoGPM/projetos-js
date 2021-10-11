@@ -1,54 +1,84 @@
 .carousel-container {
-    width: 100%;
+  width: 100%;
 }
 
 .carousel {
-    position: relative;
-    width: 500px;
-    height: 100%;
-    margin: 0 auto;
+  position: relative;
+  width: 90vw;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .carousel__item {
-    width: 500px;
-    height: 100%;
-    display: none;
+  width: 100%;
+  display: none;
 }
 
 .carousel__item--visible {
-    display: block;
+  display: block;
 }
 
 .carousel__item img {
-    width: 100%;
+  width: 100%;
 }
 
 .carousel__buttons {
-    opacity: 0;
-    transition: .5s;
+  opacity: 0;
+  transition: 0.5s;
 }
 
 .carousel__control {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 30px;
-    height: 30px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    font-size: 3em;
-    color: white;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  height: 100%;
+  border: none;
+  cursor: pointer;
+  font-size: 3em;
+  color: white;
+  margin: 0;
+  width: 50%;
 }
 
 .carousel:hover > .carousel__buttons {
-    opacity: 1;
+  opacity: 1;
 }
 
 .carousel__control--next {
-    right: 20px;
+  right: 0;
 }
 
 .carousel__control--previous {
-    left: 0;
+  left: 0;
+}
+
+.balls {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.ball {
+  --size: 8px;
+  width: var(--size);
+  height: var(--size);
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+}
+
+.ball ~ .ball {
+  margin-left: 10px;
+}
+
+.ball--selected {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.loading {
+  width: 0;
+  height: 20px;
+  background-color: red;
 }

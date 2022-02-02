@@ -51,12 +51,25 @@ function carousel({
   let timerID;
 
   /**
+   * Manipula o clique no botão de placeholder.
+   */
+  function handlePlaceholderClick() {
+    const index = this.getAttribute('data-index');
+
+    resetTimer();
+    currentIndex = index;
+    handleCSSClases();
+  }
+
+  /**
    * Cria um elemento de placeholder para cada elemento dentro de **children**.
    */
   function setupPlaceholders() {
-    children.forEach(() => {
+    children.forEach((_, index) => {
       const placeholder = document.createElement('div');
       placeholder.classList.add(placeholderCSSClass);
+      placeholder.setAttribute('data-index', index);
+      placeholder.addEventListener('click', handlePlaceholderClick);
 
       placeholdersContainer.appendChild(placeholder);
     });

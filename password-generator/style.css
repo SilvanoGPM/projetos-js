@@ -1,8 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
 
+:root {
+  --nav-color: white;
+  --nav-background-color: #070707;
+}
+
 body {
   font-family: 'Orbitron';
-  background: #191919;
+  background: #070707;
 }
 
 .wrapper {
@@ -87,4 +92,8 @@ input[type=range]::-moz-range-track {
     max-width: 80vw;
     min-width: 200px;
   }
+}
+
+#pass {
+  cursor: pointer;
 }

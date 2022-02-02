@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
 
+:root {
+  --nav-color: white;
+  --nav-background-color: #070707;
+}
+
 body {
     margin: 0;
     font-family: 'Rubik', sans-serif;

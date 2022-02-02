@@ -1,8 +1,14 @@
+:root {
+  --nav-color: #191919;
+  --nav-background-color: white;
+}
+
 body {
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 90vh;
+  background-color: white;
   color: #191919;
 }
 

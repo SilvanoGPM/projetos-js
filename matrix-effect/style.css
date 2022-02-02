@@ -1,5 +1,10 @@
+:root {
+  --nav-color: white;
+  --nav-background-color: #070707;
+}
+
 body {
-  background: #191919;
+  background: #070707;
   display: flex;
   flex-direction: column;
   justify-content: center;

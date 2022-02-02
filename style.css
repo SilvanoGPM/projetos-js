@@ -10,6 +10,8 @@ body {
   margin: 0;
   font-family: "Rubik", sans-serif;
   overflow: hidden;
+  background: var(--white);
+  color: var(--gray);
 }
 
 .header {
@@ -61,7 +63,7 @@ body {
   font-size: 1.8rem;
   user-select: none;
   margin: 0;
-  padding: 20px 0;
+  padding: 30px 0;
 }
 
 .navbar__links {
@@ -71,8 +73,6 @@ body {
 }
 
 .navbar__item {
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-  border-bottom: 1px solid #000;
   padding: 20px 0 20px 30px;
   margin: 0;
 }
@@ -147,32 +147,36 @@ body {
 
 
 .project-selected {
-  background-color: var(--white);
+  --background-color: var(--white);
+  --color: var(--gray);
+  background-color: var(--background-color);
   position: relative;
 }
 
 .project-selected::after,
 .project-selected::before {
-  --size: 20px;
+  --size: 40px;
+  --dislocation: calc(var(--size) * -1);
   content: '';
   position: absolute;
   left: 0;
   display: block;
   width: var(--size);
   height: var(--size);
-  background-color: var(--white);
+  background-color: transparent;
+  box-shadow: -20px 0 0 0 var(--background-color);
 }
 
 .project-selected::after {
-  bottom: calc(var(--size) * -1);
-  border-bottom-right-radius: 50%;
+  bottom: var(--dislocation);
+  border-top-left-radius: 50%;
 }
 
 .project-selected::before {
-  top: calc(var(--size) * -1);
-  border-top-right-radius: 50%;
+  top: var(--dislocation);
+  border-bottom-left-radius: 50%;
 }
 
 .project-selected button {
-  color: var(--gray);
+  color: var(--color);
 }

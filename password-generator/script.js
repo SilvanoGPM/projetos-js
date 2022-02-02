@@ -3,10 +3,15 @@ function control() {
   const passwordLengthElm = document.querySelector(
     '[data-js="password-length"]'
   );
+
   const button = document.querySelector("button");
   const passwordElm = document.querySelector('[data-js="password"]');
 
   let passwordLength = 8;
+
+  function copy() {
+    navigator.clipboard.writeText(passwordElm.textContent);
+  }
 
   function updatePasswordLength() {
     passwordLengthElm.innerText = range.value;
@@ -20,6 +25,8 @@ function control() {
   range.addEventListener("change", updatePasswordLength);
   button.addEventListener("click", generatePassword);
   passwordElm.addEventListener("click", copy);
+
+  generatePassword();
 }
 
 control();

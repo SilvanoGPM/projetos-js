@@ -1,3 +1,8 @@
+:root {
+  --nav-color: #191919;
+  --nav-background-color: white;
+}
+
 body {
   color: #8c7ae6;
 }

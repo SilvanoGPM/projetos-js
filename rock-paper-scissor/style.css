@@ -1,3 +1,8 @@
+:root {
+  --nav-color: #191919;
+  --nav-background-color: white;
+}
+
 body {
   color: #44e9ff;
   text-shadow: 2px 2px 2px #fa32d2;

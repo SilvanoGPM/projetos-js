@@ -16,6 +16,7 @@ Repositório com códigos de projetos simples criados com, HTML, CSS, e JavaScri
 9. [Torre de Hanoi](https://github.com/SkyG0D/projetos-js/tree/master/tower-of-hanoi).
 10. [Gerador de Senhas](https://github.com/SkyG0D/projetos-js/tree/master/password-generator).
 11. [Efeito Matrix](https://github.com/SkyG0D/projetos-js/tree/master/matrix-effect).
+12. [Bubble Sort](https://github.com/SkyG0D/projetos-js/tree/master/bubble-sort).
 
 ## Gerando lista de projetos dinamicamente
 

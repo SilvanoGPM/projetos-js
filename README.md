@@ -1,5 +1,5 @@
-# Projetos com javascript :rocket:
-Repositório com códigos de projetos simples criados com, HTML, CSS, e JavaScript.
+<h1 align="center">:rocket: Projetos com javascript</h1>
+<p align="center">Repositório com códigos de projetos simples criados com, HTML, CSS, e JavaScript.</p>
 
 ---
 

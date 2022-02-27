@@ -1,3 +1,3 @@
 # Pedra, papel tesoura
 
-![image](https://user-images.githubusercontent.com/59753526/99895101-1ecd7600-2c66-11eb-8514-650d7c49f282.png)
+![image](https://user-images.githubusercontent.com/59753526/155863353-d4e2744c-b9d0-4ebf-85b5-dca2083b9b00.png)

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Cubes</title>
+  </head>
+  <body>
+    <section class="info" data-js="info">
+      <h1>Clique com o botão esquerdo para adicionar um cubo!</h1>
+
+      <div class="input-group">
+        <label for="cubeColor">Cor do cubo:</label>
+        <input
+          type="text"
+          placeholder="#ffffff"
+          id="cubeColor"
+          data-js="cubeColor"
+        />
+      </div>
+
+      <div class="input-group">
+        <label for="cubeBottomColor">Cor de fundo do cubo:</label>
+        <input
+          type="text"
+          placeholder="#ffffff"
+          id="cubeBottomColor"
+          data-js="cubeBottomColor"
+        />
+      </div>
+
+      <div class="input-group">
+        <label for="sizeSelect">Tamanho: </label>
+        <select id="sizeSelect" data-js="sizeSelect">
+          <option value="50px">50 Pixels</option>
+          <option selected value="100px">100 Pixels</option>
+          <option value="150px">150 Pixels</option>
+          <option value="200px">200 Pixels</option>
+          <option value="250px">250 Pixels</option>
+          <option value="300px">300 Pixels</option>
+        </select>
+      </div>
+
+      <div class="input-group">
+        <label for="durationSelect">Duração da animação: </label>
+        <select id="durationSelect" data-js="durationSelect">
+          <option value="2s">2 Segundos</option>
+          <option selected value="4s">4 Segundos</option>
+          <option value="6s">6 Segundos</option>
+          <option value="8s">8 Segundos</option>
+        </select>
+      </div>
+
+      <div class="input-group">
+        <label for="revertAnimation">Reverter animação?</label>
+        <input type="checkbox" id="revertAnimation" data-js="revertAnimation" />
+      </div>
+    </section>
+
+    <section class="boxesContainer" data-js="boxesContainer"></section>
+    <script src="./index.js"></script>
+  </body>
+</html>

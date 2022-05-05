@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora de IMC</title>
+
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <main class="container">
+    <h1 class="heading">Erem Luiza Guerra</h2>
+
+      <p>
+        O IMC (ou indice de massa corporal) é o cálculo simples que permite
+        avaliar se a pessoa está dentro do peso que é considero ideal para a sua
+        altura.
+      </p>
+
+      <p>Para calcular o seu IMC, você pode usar a seguinte fórmula: <span class="imcFormula">peso x altura²</span>.
+        Também pode inserir seus dados a seguir:</p>
+
+      <form data-js="calculator">
+        <div class="input-group">
+          <label for="height">Altura (em centímetros):</label>
+          <input id="height" name="height" placeholder="ex: 170" type="number" required />
+        </div>
+
+        <div class="input-group">
+          <label for="weight">Peso (em quilos):</label>
+          <input id="weight" name="weight" placeholder="ex: 52" type="number" required />
+        </div>
+
+        <button class="form__submit" type="submit">Calcular IMC</button>
+      </form>
+  </main>
+
+  <div class="imcModal" data-js="modal">
+    <button class="imcModal__close" data-js="closeModal">X</button>
+
+    <div class="imcModal__content">
+      <table class="imcModal__table">
+        <thead>
+          <tr>
+            <th>Classificação</th>
+            <th>IMC</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Abaixo do Peso</td>
+            <td>Abaixo 18,5</td>
+          </tr>
+
+          <tr>
+            <td>Peso Normal</td>
+            <td>18,5 - 24,9</td>
+          </tr>
+
+          <tr>
+            <td>Sobrepeso</td>
+            <td>25 - 29,9</td>
+          </tr>
+
+          <tr>
+            <td>Obesidade Grau I</td>
+            <td>30 - 34,9</td>
+          </tr>
+
+          <tr>
+            <td>Obesidade Grau II</td>
+            <td>35 - 39,9</td>
+          </tr>
+
+          <tr>
+            <td>Obesidade Mórbida</td>
+            <td>Maior ou Igual a 40</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="imcModal_output">
+        <p>
+          Seu IMC: <span class="imcModal__value" data-js="imcValue"></span>
+        </p>
+        <p data-js="imcStatus"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>

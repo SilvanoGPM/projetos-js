@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #0093e9;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-width: 500px;
+  min-width: 300px;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  padding: 1.5rem;
+  background-color: white;
+}
+
+.container > p {
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+
+.heading {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-decoration: underline;
+  color: var(--primary);
+  text-align: center;
+}
+
+.imcModal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s ease-in-out;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.imcModal.visible {
+  height: 100%;
+}
+
+.imcModal__close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 1rem;
+  border: none;
+  background-color: transparent;
+  font-size: 2rem;
+  color: brown;
+  cursor: pointer;
+}
+
+.imcModal__content {
+  background-color: white;
+  padding: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  max-width: 400px;
+  width: 100%;
+  cursor: default;
+}
+
+.imcModal__table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.imcModal__table tr {
+  display: flex;
+}
+
+.imcModal__table th,
+.imcModal__table td {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  border: 1px solid black;
+}
+
+.imcModal__table th {
+  background-color: var(--primary);
+  color: white;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+}
+
+.imcModal__table tr:nth-child(even) {
+  background-color: #eee;
+}
+
+.imcModal_output {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid black;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.imcModal__value {
+  font-weight: bold;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.input-group label {
+  margin-bottom: 0.35rem;
+  font-size: 1.2rem;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.2rem 0.5rem;
+  height: 30px;
+}
+
+.input-group input:focus {
+  border-color: var(--primary);
+  outline: none;
+}
+
+.form__submit {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  text-transform: uppercase;
+}
+
+.form__submit:hover {
+  background-color: var(--primary);
+  color: white;
+}
+
+.form__submit:active {
+  transform: scale(0.98);
+}
+
+.imcFormula {
+  font-style: italic;
+  font-weight: bold;
+  color: var(--primary);
+}
